@@ -41,8 +41,13 @@ stages:
         tags: |
           $(tag)
 
-    - upload: manifests
-      artifact: manifests
+    # - upload: manifests
+    #   artifact: manifests
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'manifests'
+        publishLocation: 'Container'
 
 - stage: Deploy
   displayName: Deploy stage
