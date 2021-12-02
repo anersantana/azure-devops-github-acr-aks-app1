@@ -45,7 +45,7 @@ stages:
     #   artifact: manifests
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)/manifest'
+        PathtoPublish: '/home/vsts/work/1/s/manifest'
         ArtifactName: 'manifests'
         publishLocation: 'Container'
 
