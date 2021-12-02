@@ -45,7 +45,7 @@ stages:
     #   artifact: manifests
     - task: PublishPipelineArtifact@1
       inputs:
-        targetPath: '$(Pipeline.Workspace)'
+        targetPath: '$(Pipeline.Workspace)/s/manifest'
         artifact: 'manifest'
         publishLocation: 'pipeline'
 
