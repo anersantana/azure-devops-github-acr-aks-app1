@@ -45,7 +45,7 @@ stages:
     #   artifact: manifests
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        PathtoPublish: 'manifest'
         ArtifactName: 'manifests'
         publishLocation: 'Container'
 
