@@ -43,11 +43,11 @@ stages:
 
     # - upload: manifests
     #   artifact: manifests
-    - task: PublishBuildArtifacts@1
+    - task: PublishPipelineArtifact@1
       inputs:
-        PathtoPublish: '/home/vsts/work/1/s/manifest'
-        ArtifactName: 'manifests'
-        publishLocation: 'Container'
+        targetPath: '$(Pipeline.Workspace)'
+        artifact: 'manifest'
+        publishLocation: 'pipeline'
 
 - stage: Deploy
   displayName: Deploy stage
