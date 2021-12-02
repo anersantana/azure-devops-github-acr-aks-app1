@@ -47,7 +47,7 @@ stages:
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'manifests'
-        publishLocation: 'FilePath'
+        publishLocation: 'Container'
 
 - stage: Deploy
   displayName: Deploy stage
